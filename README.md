@@ -3,8 +3,17 @@ An Exploit Crafter to achieve Pickle Deserialization Remote Code Execution
 Just provide the wanted to execute code and you're on the go.
 
 It aims to automate in a simple way Exploit Crafting from python2.7 code files.
+### Know How
+The main part of the exploit is written in  pickle machine language in order to invoke, on deserialization, the code provided by the user.
 
-### options 
+In particular the passed code is serialized with Marshall library, base64 encoded and put into the pickle machine code which
+when deserialized will do this :
+- base64 decode the payload 
+- marshal load the payload (in order to deserialize the code)
+- statically build a function, inject the payload code in it
+- call that function
+
+## options 
 - -f --foo  file_name.py  
 craft an exploit that, on deserialization, will execute the given python2.7 code   
 - -e --encode base64/hex 
@@ -15,7 +24,7 @@ the crafted exploit is then saved in a file
 dynamically write your python code and hit CTRL-C in a new line to end the code
 
 
-### Examples
+## Examples
 example.py code :
 ```python
 import os
@@ -79,7 +88,7 @@ ___________________________________________________________
 __________________________Job_Done_________________________
 ```
 
-### Author
+# Author
 Lacerenza Francesco - Systems and Networks Security 
 twitter: [@lacerenza_fra](https://twitter.com/lacerenza_fra)
 linkedin: [lacerenzafrancesco](https://www.linkedin.com/in/francesco-lacerenza/)
