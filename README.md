@@ -9,8 +9,8 @@ Just launch it, copy the crafted exploit and inject it in misconfigured paramete
 #### Know How 
 The main part of the exploit is written in  pickle machine language in order to invoke, on deserialization, the code provided by the user.
 
-In particular the passed code is serialized with Marshall library, base64 encoded and put into the pickle machine code which
-when deserialized will  :
+In particular the passed code is serialized with Marshall library, base64 encoded and put into the pickle machine code which,
+when deserialized by the victim, will  :
 - base64 decode the payload 
 - marshal load the payload (in order to deserialize the code)
 - statically build a function, inject the payload code in it
