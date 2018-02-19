@@ -1,5 +1,5 @@
 # evilPick
-An Exploit Crafter to achieve Pickle Deserialization Remote Code Execution 
+An Exploit Crafter to achieve Pickle Deserialization Remote Code Execution ,
 Just provide the wanted to execute code and you're on the go.
 
 It aims to automate in a simple way Exploit Crafting from python2.7 code files.
