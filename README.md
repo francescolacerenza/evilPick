@@ -15,6 +15,7 @@ when deserialized will  :
 - marshal load the payload (in order to deserialize the code)
 - statically build a function, inject the payload code in it
 - call that function
+Here we are, Remote Code Execution.
 
 ## options 
 - -f --foo  file_name.py  
