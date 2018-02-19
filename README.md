@@ -6,20 +6,6 @@ It aims to automate in a simple way Exploit Crafting from python2.7 code files.
 
 Just launch it, copy the crafted exploit and inject it in misconfigured parameters.
 
-#### Know How 
-The main part of the exploit is written in  pickle machine language in order to invoke, on deserialization, the code provided by the user.
-
-In particular the passed code is serialized with Marshall library, base64 encoded and put into the pickle machine code which,
-when deserialized by the victim, will  :
-- base64 decode the payload 
-- marshal load the payload (in order to deserialize the code)
-- statically build a function thanks to types.FunctionType
-- inject the payload code in it
-- call that function
-
-
-Here we are, Remote Code Execution.
-
 ## options 
 - -f --foo  file_name.py  
 craft an exploit that, on deserialization, will execute the given python2.7 code   
@@ -94,6 +80,21 @@ ___________________________________________________________
 
 __________________________Job_Done_________________________
 ```
+
+#### Know How 
+The main part of the exploit is written in  pickle machine language in order to invoke, on deserialization, the code provided by the user.
+
+In particular the passed code is serialized with Marshall library, base64 encoded and put into the pickle machine code which,
+when deserialized by the victim, will  :
+- base64 decode the payload 
+- marshal load the payload (in order to deserialize the code)
+- statically build a function thanks to types.FunctionType
+- inject the payload code in it
+- call that function
+
+
+Here we are, Remote Code Execution.
+
 
 # Author
 Lacerenza Francesco - Systems and Networks Security.
