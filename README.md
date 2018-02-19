@@ -13,7 +13,8 @@ In particular the passed code is serialized with Marshall library, base64 encode
 when deserialized by the victim, will  :
 - base64 decode the payload 
 - marshal load the payload (in order to deserialize the code)
-- statically build a function, inject the payload code in it
+- statically build a function thanks to types.FunctionType
+- inject the payload code in it
 - call that function
 
 
