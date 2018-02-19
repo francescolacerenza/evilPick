@@ -14,7 +14,7 @@ when deserialized will  :
 - base64 decode the payload 
 - marshal load the payload (in order to deserialize the code)
 - statically build a function, inject the payload code in it
-- call that function
+- call that function\n
 Here we are, Remote Code Execution.
 
 ## options 
