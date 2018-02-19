@@ -7,7 +7,7 @@ It aims to automate in a simple way Exploit Crafting from python2.7 code files.
 The main part of the exploit is written in  pickle machine language in order to invoke, on deserialization, the code provided by the user.
 
 In particular the passed code is serialized with Marshall library, base64 encoded and put into the pickle machine code which
-when deserialized will do this :
+when deserialized will  :
 - base64 decode the payload 
 - marshal load the payload (in order to deserialize the code)
 - statically build a function, inject the payload code in it
@@ -89,6 +89,6 @@ __________________________Job_Done_________________________
 ```
 
 # Author
-Lacerenza Francesco - Systems and Networks Security 
+Lacerenza Francesco - Systems and Networks Security.
 twitter: [@lacerenza_fra](https://twitter.com/lacerenza_fra)
 linkedin: [lacerenzafrancesco](https://www.linkedin.com/in/francesco-lacerenza/)
